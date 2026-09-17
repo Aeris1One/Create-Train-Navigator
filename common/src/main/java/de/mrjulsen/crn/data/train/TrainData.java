@@ -579,7 +579,7 @@ public class TrainData implements IListenable<TrainData> {
         Set<Integer> validPredictionEntries = new HashSet<>();
         boolean hasCycled = false;
 
-        final long now = ModUtils.getTransformedWorldTime() + waitingAtStationTicks();
+        final long now = ModUtils.getTransformedWorldTime() - waitingAtStationTicks();
         long time = now;
 
         for (int i = 0; i < entryCount; i++) {
